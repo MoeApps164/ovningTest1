@@ -3,9 +3,9 @@ import java.util.InputMismatchException;
 // Steg 7: loop för att hantera fel inmatning
 
 
-
 void main() {
 
+//DEL 1 indexuppgiften
     System.out.println("Programmet startar ");
 
     String[] names = {"adam ", "kaldi", "mohammed"};
@@ -35,4 +35,16 @@ while (!val) {
             scan.nextLine();
         }
     }
+
+    //  steg 2 division övning
+    System.out.println("\nNu ska vi testa division.");
+
+    System.out.print("Skriv första talet: ");
+    int tal1 = scan.nextInt();
+
+    System.out.print("Skriv andra talet: ");
+    int tal2 = scan.nextInt();
+
+    int kvot = tal1 / tal2;
+    System.out.println("Kvoten blir: " + kvot);
 }
