@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
+// Steg 7: loop för att hantera fel inmatning
 
 
 
