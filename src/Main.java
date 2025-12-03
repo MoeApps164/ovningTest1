@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
+
 
 
 void main() {
@@ -13,9 +15,16 @@ void main() {
 
     Scanner scan = new Scanner(System.in);
 
-    System.out.print("Skriv vilket index (0-2) du vill se: ");
-    int namnIndex = scan.nextInt();
+    try {
+        System.out.print("Skriv vilket index (0-2) du vill se: ");
+        int index = scan.nextInt();
 
-    System.out.println("Du valde index " + namnIndex + ", namnet är: " + names[namnIndex]);
+        System.out.println("Du valde index " + index + ", namnet är: " + names[index]);
 
+    } catch (InputMismatchException e) {
+        System.out.println("Fel: du måste skriva ett heltal.");
+
+    } catch (ArrayIndexOutOfBoundsException e) {
+        System.out.println("Fel: index måste vara 0, 1 eller 2.");
+    }
 }
