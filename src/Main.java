@@ -3,9 +3,9 @@ import java.util.InputMismatchException;
 // Steg 7: loop för att hantera fel inmatning
 
 
+
 void main() {
 
-//DEL 1 indexuppgiften
     System.out.println("Programmet startar ");
 
     String[] names = {"adam ", "kaldi", "mohammed"};
@@ -17,14 +17,14 @@ void main() {
     Scanner scan = new Scanner(System.in);
     boolean val = false;
 
-    while (!val) {
+while (!val) {
         try {
             System.out.print("Skriv vilket index (0-2) du vill se: ");
             int index = scan.nextInt();
 
             System.out.println("Du valde index " + index + ", namnet är: " + names[index]);
 
-            val = true;
+              val = true;
 
         } catch (InputMismatchException e) {
             System.out.println("Fel: du måste skriva ett heltal.");
@@ -34,25 +34,5 @@ void main() {
             System.out.println("Fel: index måste vara 0, 1 eller 2.");
             scan.nextLine();
         }
-    }
-
-    //  steg 2 division övning
-    try {
-        System.out.print("Skriv första talet: ");
-        int tal1 = scan.nextInt();
-
-        System.out.print("Skriv andra talet: ");
-        int tal2 = scan.nextInt();
-
-        int kvot = tal1 / tal2;
-        System.out.println("Kvoten blir: " + kvot);
-
-    } catch (InputMismatchException e) {
-        System.out.println("Fel: du måste skriva ett heltal.");
-        System.out.println(e);
-
-    } catch (ArithmeticException e) {
-        System.out.println("Fel: du får inte dela med 0.");
-        System.out.println(e);
     }
 }
