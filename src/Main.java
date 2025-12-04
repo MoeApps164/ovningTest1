@@ -40,6 +40,10 @@ while (!val) {
 
     System.out.println("Nu  testa division.");
 
+    boolean divisionTrue = false;
+
+    while (!divisionTrue) {
+
     try {
         System.out.print("Skriv första talet: ");
         int tal1 = scan.nextInt();
@@ -49,6 +53,7 @@ while (!val) {
 
         int kvot = tal1 / tal2;
         System.out.println("Kvoten blir: " + kvot);
+        divisionTrue = true;
 
     } catch (InputMismatchException e) {
         System.out.println("Fel: du måste skriva ett heltal.");
@@ -59,4 +64,5 @@ while (!val) {
         System.out.println("Fel: du får inte dela med 0.");
         System.out.println(e);
     }
+}
 }
