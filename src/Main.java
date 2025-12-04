@@ -2,8 +2,6 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 
 
-// Återställning: Divisionskod ska läggas in igen (commit-trigger)
-// Steg 7: loop för att hantera fel inmatning
 
 void main() {
 
@@ -39,16 +37,26 @@ while (!val) {
             scan.nextLine();
         }
     }
-// DEL 2: Division Fas 1
-    System.out.println("\nNu ska vi testa division.");
 
-    System.out.print("Skriv första talet: ");
-    int tal1 = scan.nextInt();
+    System.out.println("Nu  testa division.");
 
-    System.out.print("Skriv andra talet: ");
-    int tal2 = scan.nextInt();
+    try {
+        System.out.print("Skriv första talet: ");
+        int tal1 = scan.nextInt();
 
-    int kvot = tal1 / tal2;
-    System.out.println("Kvoten blir: " + kvot);
+        System.out.print("Skriv andra talet: ");
+        int tal2 = scan.nextInt();
 
+        int kvot = tal1 / tal2;
+        System.out.println("Kvoten blir: " + kvot);
+
+    } catch (InputMismatchException e) {
+        System.out.println("Fel: du måste skriva ett heltal.");
+        System.out.println(e);
+        scan.nextLine();
+
+    } catch (ArithmeticException e) {
+        System.out.println("Fel: du får inte dela med 0.");
+        System.out.println(e);
+    }
 }
