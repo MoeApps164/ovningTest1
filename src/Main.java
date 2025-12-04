@@ -1,8 +1,9 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
+
+
+// Återställning: Divisionskod ska läggas in igen (commit-trigger)
 // Steg 7: loop för att hantera fel inmatning
-
-
 
 void main() {
 
@@ -26,6 +27,9 @@ while (!val) {
 
               val = true;
 
+
+
+
         } catch (InputMismatchException e) {
             System.out.println("Fel: du måste skriva ett heltal.");
             scan.nextLine();
@@ -35,4 +39,4 @@ while (!val) {
             scan.nextLine();
         }
     }
-}// behöver kommentar för commit då det alltid felat sig när jag vill commita
+}
