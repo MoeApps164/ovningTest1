@@ -35,4 +35,4 @@ while (!val) {
             scan.nextLine();
         }
     }
-}
+}// behöver kommentar för commit då det alltid felat sig när jag vill commita
