@@ -39,4 +39,16 @@ while (!val) {
             scan.nextLine();
         }
     }
+// DEL 2: Division Fas 1
+    System.out.println("\nNu ska vi testa division.");
+
+    System.out.print("Skriv första talet: ");
+    int tal1 = scan.nextInt();
+
+    System.out.print("Skriv andra talet: ");
+    int tal2 = scan.nextInt();
+
+    int kvot = tal1 / tal2;
+    System.out.println("Kvoten blir: " + kvot);
+
 }
