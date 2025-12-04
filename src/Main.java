@@ -65,4 +65,26 @@ while (!val) {
         System.out.println(e);
     }
 }
+
+    System.out.println("Nu ska vi läsa in 5 heltal.");
+
+    int[] talArray = new int[5];  // array med plats för 5 tal
+
+    for (int i = 0; i < talArray.length; i++) {
+
+        boolean korrektTal = false;
+
+        while (!korrektTal) {
+            try {
+                System.out.print("Skriv tal nummer " + (i + 1) + ": ");
+                talArray[i] = scan.nextInt();
+
+                korrektTal = true;
+
+            } catch (InputMismatchException e) {
+                System.out.println("Fel: du måste skriva ett heltal.");
+                scan.nextLine();
+            }
+        }
+    }
 }
