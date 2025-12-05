@@ -87,4 +87,18 @@ while (!val) {
             }
         }
     }
+    System.out.println("\nVilket index (0-4) vill du läsa från talArray?");
+
+    try {
+        int arrayIndex = scan.nextInt();
+        System.out.println("På index " + arrayIndex + " ligger talet: " + talArray[arrayIndex]);
+
+    } catch (InputMismatchException e) {
+        System.out.println("Fel: du måste skriva ett heltal.");
+        scan.nextLine();
+
+    } catch (ArrayIndexOutOfBoundsException e) {
+        System.out.println("Fel: index måste vara mellan 0 och 4.");
+    }
+
 }
